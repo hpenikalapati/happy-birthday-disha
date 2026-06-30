@@ -29,33 +29,6 @@ body{
 
 /* CARD */
 
-.card{
-
-    width:430px;
-
-    background:rgba(255,255,255,.75);
-
-    backdrop-filter:blur(12px);
-
-    border-radius:30px;
-
-    padding:35px;
-
-    text-align:center;
-
-    box-shadow:0 20px 40px rgba(0,0,0,.12);
-
-    z-index:10;
-}
-
-
-.cinnamoroll{
-
-    width:220px;
-
-    animation:float 3s ease-in-out infinite;
-}
-
 h1{
 
     color:#5ab7ff;
@@ -83,6 +56,13 @@ p{
     font-weight:bold;
     line-height:1.6;
     box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.cinnamoroll-sanrio-dancing{
+
+    width:220px;
+
+    animation:float 3s ease-in-out infinite;
 }
 
 
