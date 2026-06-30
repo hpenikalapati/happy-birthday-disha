@@ -72,6 +72,19 @@ p{
     margin-bottom:20px;
 }
 
+.birthday-message{
+    margin-top:25px;
+    padding:18px;
+    border-radius:18px;
+    background:rgba(255,255,255,.75);
+    border:2px solid #d6efff;
+    color:#5ca8e6;
+    font-size:20px;
+    font-weight:bold;
+    line-height:1.6;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
 
 /* FLOATING IMAGE */
 
