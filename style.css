@@ -183,6 +183,66 @@ h1{
     animation:moveCloud 27s linear infinite;
 }
 
+/* ---------- BALLOONS ---------- */
+
+.balloon-container {
+    position: absolute;
+    bottom: -50px; /* Start slightly below or at the bottom edge */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Spacing between balloons on the same side */
+    z-index: 5; /* Sits behind text, but in front of clouds */
+}
+
+/* Position the containers on the sides */
+.left-side {
+    left: 5%;
+    bottom: 15%;
+}
+
+.right-side {
+    right: 5%;
+    bottom: 20%;
+}
+
+/* Style the balloon emojis */
+.balloon {
+    font-size: 4rem; /* Makes the balloon emoji nice and large */
+    user-select: none;
+    animation: balloonFloat 4s ease-in-out infinite;
+}
+
+/* Give individual balloons slightly staggered animation delays for a natural look */
+.b2 {
+    animation-delay: 1s;
+    transform: scale(0.9) rotate(-10deg); /* slightly different size/angle */
+}
+
+.b3 {
+    animation-delay: 0.5s;
+    transform: rotate(5deg);
+}
+
+.b4 {
+    animation-delay: 1.8s;
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* ---------- BALLOON ANIMATION ---------- */
+
+@keyframes balloonFloat {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        /* Moves up and sways slightly */
+        transform: translateY(-25px) rotate(8deg); 
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
 /* ---------- SPARKLES ---------- */
 
 .sparkle{
