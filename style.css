@@ -72,48 +72,6 @@ p{
     margin-bottom:20px;
 }
 
-button{
-
-    background:#78c9ff;
-
-    color:white;
-
-    border:none;
-
-    padding:14px 28px;
-
-    border-radius:40px;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-button:hover{
-
-    transform:translateY(-3px);
-
-    background:#4fb6ff;
-}
-
-.hidden{
-
-    display:none;
-
-    margin-top:25px;
-
-    color:#5ab7ff;
-
-    font-size:22px;
-}
-
-.show{
-
-    display:block;
-}
-
 
 /* FLOATING IMAGE */
 
