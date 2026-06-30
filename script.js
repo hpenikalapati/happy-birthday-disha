@@ -1,9 +1,5 @@
 function showMessage(){
 
-    document
-        .getElementById("surprise")
-        .classList.toggle("show");
-
     confetti({
 
         particleCount:180,
