@@ -6,86 +6,102 @@
 
 body{
 
+    font-family:"Trebuchet MS",sans-serif;
+
+    min-height:100vh;
+
     overflow:hidden;
 
-    height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-family:'Trebuchet MS',sans-serif;
-
-    background:linear-gradient(
-        180deg,
-        #dff5ff 0%,
-        #edfaff 45%,
-        #ffffff 100%
+    background:
+    linear-gradient(
+        to bottom,
+        #bfe8ff 0%,
+        #dff5ff 35%,
+        #f7fcff 100%
     );
 
     position:relative;
 }
 
+/* ---------- MAIN ---------- */
 
-/* CARD */
+main{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:10;
+
+    position:relative;
+}
 
 h1{
 
-    color:#5ab7ff;
+    font-size:5rem;
 
-    margin:15px 0;
+    color:#5baeff;
+
+    text-shadow:
+    0 0 15px white,
+    0 0 25px white;
+
+    margin-bottom:30px;
 }
 
-p{
+.message{
 
-    color:#5f6d7a;
+    width:700px;
 
-    line-height:1.6;
+    max-width:90%;
 
-    margin-bottom:20px;
+    font-size:1.5rem;
+
+    color:#4589c7;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
 }
 
-.birthday-message{
-    margin-top:25px;
-    padding:18px;
-    border-radius:18px;
-    background:rgba(255,255,255,.75);
-    border:2px solid #d6efff;
-    color:#5ca8e6;
-    font-size:20px;
-    font-weight:bold;
-    line-height:1.6;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+.wish{
+
+    font-size:2rem;
+
+    color:#4da8ff;
+
+    margin-bottom:10px;
 }
 
-.cinnamoroll-sanrio-dancing{
+.wish2{
 
-    width:220px;
+    font-size:1.4rem;
+
+    color:#4da8ff;
+
+    margin-bottom:50px;
+}
+
+/* ---------- CINNAMOROLL ---------- */
+
+.cinnamoroll{
+
+    width:350px;
 
     animation:float 3s ease-in-out infinite;
 }
 
-
-/* FLOATING IMAGE */
-
-@keyframes float{
-
-0%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-12px);
-}
-
-100%{
-transform:translateY(0px);
-}
-
-}
-
-
-/* CLOUDS */
+/* ---------- CLOUDS ---------- */
 
 .cloud{
 
@@ -95,7 +111,10 @@ transform:translateY(0px);
 
     border-radius:100px;
 
-    opacity:.75;
+    opacity:.9;
+
+    filter:blur(2px);
+
 }
 
 .cloud::before{
@@ -112,9 +131,9 @@ transform:translateY(0px);
 
     border-radius:50%;
 
-    top:-35px;
+    left:20px;
 
-    left:25px;
+    top:-30px;
 }
 
 .cloud::after{
@@ -125,105 +144,116 @@ transform:translateY(0px);
 
     background:white;
 
-    width:55px;
+    width:90px;
 
-    height:55px;
+    height:90px;
 
     border-radius:50%;
 
-    top:-22px;
-
     right:20px;
+
+    top:-45px;
 }
 
-.cloud1{
-
-    width:170px;
-    height:60px;
-
-    top:70px;
-
-    left:-200px;
-
-    animation:moveCloud 40s linear infinite;
-}
-
-.cloud2{
+.c1{
 
     width:220px;
     height:70px;
 
-    top:180px;
-
-    left:-300px;
-
-    animation:moveCloud 55s linear infinite;
-}
-
-.cloud3{
-
-    width:150px;
-    height:55px;
-
-    top:380px;
-
+    top:8%;
     left:-250px;
 
-    animation:moveCloud 35s linear infinite;
+    animation:moveCloud 32s linear infinite;
 }
 
-@keyframes moveCloud{
+.c2{
 
-0%{
+    width:260px;
+    height:80px;
 
-transform:translateX(-300px);
+    top:30%;
+    left:-300px;
+
+    animation:moveCloud 40s linear infinite;
 }
 
-100%{
+.c3{
 
-transform:translateX(1800px);
+    width:180px;
+    height:60px;
+
+    top:70%;
+    left:-220px;
+
+    animation:moveCloud 27s linear infinite;
 }
 
-}
-
-
-/* SPARKLES */
+/* ---------- SPARKLES ---------- */
 
 .sparkle{
 
     position:absolute;
 
-    width:5px;
+    color:white;
 
-    height:5px;
+    font-size:28px;
 
-    background:white;
-
-    border-radius:50%;
-
-    box-shadow:
-
-    0 0 10px white,
-
-    0 0 20px white,
-
-    0 0 30px #d5f4ff;
-
-    animation:twinkle 2s infinite;
+    animation:twinkle 2s infinite alternate;
 }
+
+.s1{top:10%;left:20%;}
+.s2{top:18%;right:18%;}
+.s3{top:35%;left:8%;}
+.s4{top:60%;right:10%;}
+.s5{bottom:15%;left:25%;}
+.s6{bottom:25%;right:28%;}
 
 @keyframes twinkle{
 
-0%,100%{
+    from{
 
-opacity:.2;
-transform:scale(.5);
+        opacity:.2;
+
+        transform:scale(.6);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1.4);
+    }
 }
 
-50%{
+/* ---------- ANIMATIONS ---------- */
 
-opacity:1;
-transform:scale(1.6);
+@keyframes moveCloud{
+
+    from{
+
+        transform:translateX(-300px);
+    }
+
+    to{
+
+        transform:translateX(calc(100vw + 500px));
+    }
 }
 
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+    }
+
+    100%{
+
+        transform:translateY(0px);
+    }
 }
